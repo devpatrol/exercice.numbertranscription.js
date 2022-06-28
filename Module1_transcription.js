@@ -181,6 +181,7 @@ function lireNombreType2(nombre){
                 
             }
             else{
+                if(concat_nombre(arra[1],arra[2])==0){return (lireDic(arra[0])+" cent ")}
             return (lireDic(arra[0])+" cent "+lireDic(concat_nombre(arra[1],arra[2])))
            }}
 
@@ -346,9 +347,9 @@ function partie_decimal(tab){
         
             if(checkfloat(data)){
                 var part_en= partie_entier(tab)
-                var part_dec= partie_decimal(tab)console.log(lireNombreType1(part_en))
+                var part_dec= partie_decimal(tab)
                 console.log(lireNombreType1(part_dec))
-                  0dr567+                console.log(data+"  =  "+lireNombre(part_en)+" virgule "+lireNombre(part_dec));
+                console.log(data+"  =  "+lireNombre(part_en)+" virgule "+lireNombre(part_dec));
             }
             else {
                 nombre=parseInt(data)
