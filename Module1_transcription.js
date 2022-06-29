@@ -1,4 +1,5 @@
 const readline = require('readline').createInterface(process.stdin, process.stdout);
+const prompt = require("prompt-sync")({ sigint: true });
 
 const dic = {
     0: "zéro",
@@ -328,6 +329,14 @@ function checkfloat(string) {
     return false;
 }
 
+
+
+
+/*
+MODULE 2: VERIFIER SI L'EXPRESSION EST BIEN FORME
+
+*/
+
 const symbole = {
     '+': ' plus ',
     '-': ' moins ',
@@ -338,25 +347,6 @@ const symbole = {
     '%': ' modulo ',
     ')': ''
 };
-
-
-//     var array = [], tab = [], val
-//     readline.on('close', () => process.exit(0));
-//     readline.on('line', (data)=>{
-//         let tab= data.split('')
-
-//             if(checkfloat(data)){
-//                 var part_en= partie_entier(tab)
-//                 var part_dec= partie_decimal(tab)
-//                 console.log(lireNombreType1(part_dec))
-//                 console.log(data+"  =  "+lireNombre(part_en)+" virgule "+lireNombre(part_dec));
-//             }
-//             else {
-//                 nombre=parseInt(data)
-//                 transcrire(nombre)
-// }
-// readline.close();
-// });
 
 function lire(nombre_chaine = '') {
     var liste = nombre_chaine.split('');
@@ -370,39 +360,96 @@ function lire(nombre_chaine = '') {
     }
 }
 
-var array = [],
-    tab = [],
-    val
-readline.on('close', () => process.exit(0));
-readline.on('line', (data) => {
-    let tab = data.split('')
-    var final = ''
-    var nombre = ''
-    for (var i = 0; i < data.length; i++) {
-        // liste = liste.push(data[i]);
-        if (data[i] == '0' || data[i] == '1' || data[i] == '2' || data[i] == '3' || data[i] == '4' || data[i] == '5' || data[i] == '6' || data[i] == '7' || data[i] == '8' || data[i] == '9' || data[i] == '.') {
-            nombre = nombre + data[i];
-        }
-        if (data[i] == '(') {
-            final += lire(nombre);
-            nombre = '';
-            final += symbole[data[i]]
-        }
-        if (data[i] == ')') {
-            final += lire(nombre);
-            nombre = '';
-        } else if (data[i] == '+' || data[i] == '-' || data[i] == '/' || data[i] == '*' || data[i] == '%' || data[i] == '=') {
-            if (nombre != '') {
-                final += lire(nombre);
-                nombre = '';
-            }
-
-            final += symbole[data[i]]
+function count(a, chaine) {
+    var nb = 0
+    var tab = chaine.split('')
+    for (var i = 0; i < tab.length; i++) {
+        if (tab[i] == a) {
+            nb += 1;
         }
     }
-    final += lire(nombre);
-    console.log(data + " = " + final)
+    return nb;
+}
 
-    readline.close();
-});
-// module 2: expression
+function appartient(a, chaine) {
+    var tab = chaine.split('')
+    for (var i = 0; i < tab.length; i++) {
+        if (tab[i] == a) {
+            return true;
+
+        }
+    }
+    return false;
+}
+
+function bienforme(chaine) {
+    var val = "0123456789/*-+%.()="
+    var tab = chaine.split('')
+    var verdict = true
+    nb_parenthese_ouvrante = count("(", chaine)
+    nb_parenthese_fermante = count(")", chaine)
+    for (var i = 0; i < tab.length; i++) {
+        if (!appartient(tab[i], val)) {
+            console.log(tab[i], " inconnue")
+            return false;
+        }
+        if ((nb_parenthese_fermante != nb_parenthese_ouvrante) || (appartient("()", chaine))) {
+            console.log("expression mal forme : ( ")
+            return false;
+        }
+        if ((count("=", chaine) > 1)) {
+            console.log(" Mal forme: ==");
+            return false;
+        }
+
+    }
+    return verdict;
+}
+
+function final() {
+    var array = [],
+        tab = [],
+        val
+    readline.question("\n>>Expression: \t", (data) => {
+
+        let tab = data.split('')
+        var bien_forme = bienforme(data)
+        if (bien_forme) {
+            var final = ''
+            var nombre = ''
+            for (var i = 0; i < data.length; i++) {
+                // liste = liste.push(data[i]);
+                if (data[i] == '0' || data[i] == '1' || data[i] == '2' || data[i] == '3' || data[i] == '4' || data[i] == '5' || data[i] == '6' || data[i] == '7' || data[i] == '8' || data[i] == '9' || data[i] == '.') {
+                    nombre = nombre + data[i];
+                }
+                if (data[i] == '(') {
+                    final += lire(nombre);
+                    nombre = '';
+                    final += symbole[data[i]]
+                }
+                // if (data[i] == ')') {
+                //     final += lire(nombre);
+                //     nombre = '';
+                //     final += ' ';
+                // }
+                if (data[i] == '+' || data[i] == '-' || data[i] == '/' || data[i] == '*' || data[i] == '%' || data[i] == '=') {
+                    if (nombre != '') {
+                        final += lire(nombre);
+                        nombre = '';
+                    }
+
+                    final += symbole[data[i]]
+                } else {
+                    nombre += '';
+                }
+            }
+            final += lire(nombre);
+            console.log("\n>>Transcription :   ' " + final + " '\n\n")
+        }
+        readline.close();
+    });
+}
+
+// EXUCITION DE LA TRANSCRIPTION
+
+final();
