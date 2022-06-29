@@ -1,0 +1,52 @@
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   2000
+
+>>Transcription :   ' deux mille '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   175.25
+
+>>Transcription :   '  cent soixante-quinze virgule vingt-cinq '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   2(25+3)(40-2)=5
+
+>>Transcription :   ' deux facteur de vingt-cinq plus trois facteur de quarante moins deux egale cinq '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   0.3500
+
+>>Transcription :   ' zéro virgule trois mille cinq cent  '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   2((25-3)=45
+expression mal forme : ( 
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   2%2=0
+
+>>Transcription :   ' deux modulo deux egale zéro '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   5/5=1
+
+>>Transcription :   ' cinq divise par cinq egale un '
+
+
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ node transcript.js
+
+>>Expression:   25=30=25
+ Mal forme: ==
+codeur16@codeur16-dynabook-EX-55LBL:~/Bureau/DEVPATROL solution/Transcription/exercice.numbertranscription.js$ 
