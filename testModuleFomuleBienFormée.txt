@@ -1,0 +1,39 @@
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？(4*2)
+Oh! il n'ya pas de problème
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？((4*2)*
+Il y a un problème au niveau de : ( , *
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？(4*2)
+Oh! il n'ya pas de problème! Bravo!
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？(4*2)*
+Il y a un problème au niveau de :  *
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？(2*4)
+Oh! il n'ya pas de problème! Bravo!
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？(2*2*)
+Il y a un problème au niveau de : *
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？((2+4)
+Il y a un problème au niveau de : (
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？((((((((((((((((((((((((((((((2)))))))))
+
+Il y a un problème au niveau de : (,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(,(
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？2%2
+Oh! il n'ya pas de problème! Bravo!
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？25=20=24
+Oh! il n'ya pas de problème! Bravo!
+
