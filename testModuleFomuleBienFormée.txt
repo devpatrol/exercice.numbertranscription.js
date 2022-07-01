@@ -1,3 +1,7 @@
+//VEILLEZ CONSIDERER S'IL VOUS PLAT QUE LES CALCULS N'ONT PAS ETE PRIS EN COMPTE DONC LES EGALIT 
+
+
+
 eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
 Quelle est votre expression？(4*2)
 Oh! il n'ya pas de problème
@@ -34,6 +38,39 @@ Quelle est votre expression？2%2
 Oh! il n'ya pas de problème! Bravo!
 
 eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？25=20=24
+Oh! il n'ya pas de problème! Bravo!
+
+Quelle est votre expression？2%2
+Oh! il n'ya pas de problème! Bravo!
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？25=20=24
+Oh! il n'ya pas de problème! Bravo!
+
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？12=(4
+Il y a un problème au niveau de : ( 
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？11==4
+Il y a un problème au niveau de : =
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？11=*5*
+Il y a un problème au niveau de : *,*
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？11==*5*
+Il y a un problème au niveau de : =,*,*
+
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？115*
+Il y a un problème au niveau de : *
+eikoujoy@eikouj-X550CC:~/Documents/NUMBER TRANSCRIPTOR$ node moduleII_formuleBienFormee.js
+Quelle est votre expression？115456*
+Il y a un problème au niveau de : *
+
 Quelle est votre expression？25=20=24
 Oh! il n'ya pas de problème! Bravo!
 
